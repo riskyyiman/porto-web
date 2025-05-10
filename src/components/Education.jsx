@@ -17,7 +17,7 @@ const Education = () => {
               </div>
               <p className="text-xs sm:text-sm md:text-base text-[#737373] font-medium">Okt 2023 - Now</p>
             </div>
-            <p className="text-xs sm:text-sm md:text-sm text-[#737373]">Informatics Engineering</p>
+            <p className="text-xs text-left sm:text-sm md:text-sm text-[#737373]">Informatics Engineering</p>
           </a>
         </div>
 
@@ -34,7 +34,7 @@ const Education = () => {
               </div>
               <p className="text-xs sm:text-sm md:text-base text-[#737373] font-medium">Okt 2019 - 2023</p>
             </div>
-            <p className="text-xs sm:text-sm md:text-sm text-[#737373]">Automotive Light Vehicle Engineering</p>
+            <p className="text-xs text-left sm:text-sm md:text-sm text-[#737373]">Automotive Light Vehicle Engineering</p>
           </a>
         </div>
       </div>

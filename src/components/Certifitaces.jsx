@@ -90,7 +90,7 @@ const Certificates = () => {
       <div className="flex justify-start mt-6">
         <button onClick={() => setShowAll(!showAll)} className="inline-flex items-center gap-2 bg-black text-white text-sm px-4 py-2 rounded-md hover:bg-black/80 transition">
           {showAll ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-          {showAll ? 'Hide' : 'Show All'}
+          {showAll ? '' : ''}
         </button>
       </div>
 

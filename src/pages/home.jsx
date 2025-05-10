@@ -5,7 +5,6 @@ import Skills from '../components/Skills';
 import Project from '../components/Project';
 import Certifitaces from '../components/Certifitaces';
 import Contact from '../components/Contact';
-import TiltedCard from '../components/TiltedCard/TiltedCard';
 
 const home = () => {
   const items = [
@@ -48,7 +47,7 @@ const home = () => {
   ];
 
   return (
-    <div className="bg-white relative ">
+    <div className="bg-white relative">
       <div className="mx-auto max-w-[700px] py-10 sm:py-24 text-black">
         <div className="relative z-10 backdrop-filter backdrop-blur-lg bg-white bg-opacity-10 rounded-lg p-6 xs:p-4">
           <div className="flex flex-col lg:flex-row justify-between mb-10 select-none gap-6">
@@ -113,37 +112,30 @@ const home = () => {
             <Project />
           </div>
 
-          <div className="mb-20 sm:mb-40 flex flex-col items-center justify-center text-center" id="certificates">
+          <div className="mb-15 sm:mb-40 flex flex-col items-center justify-center text-center" id="certificates">
             <Certifitaces />
           </div>
 
-          <div className="mb-12 flex flex-col items-center justify-center sm:mb-8 text-center" id="contact">
+          <div className="mb-8 flex flex-col items-center justify-center sm:mb-8 text-center" id="contact">
             <Contact />
           </div>
         </div>
 
-        <div className="mt-10 mb-10 flex justify-center items-center gap-4">
-          <TiltedCard
-            imageSrc="../../images/image2.jpg"
-            altText="Risky Iman Lael Prasetio"
-            captionText="manlael_"
-            containerHeight="300px"
-            containerWidth="300px"
-            imageHeight="300px"
-            imageWidth="300px"
-            rotateAmplitude={12}
-            scaleOnHover={1.2}
-            showMobileWarning={false}
-            showTooltip={true}
-            containerClassName="   overflow-hidden"
-            displayOverlayContent={true}
-            overlayContent={<p className="tilted-card-demo-text ms-3 mt-3 font-semibold text-blue-50">Risky Iman - DEV</p>}
-          />
-        </div>
+        <div className="flex justify-end mt-10 relative group">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="p-3 rounded-full bg-purple-600 hover:bg-purple-700 transition duration-300 shadow-lg transform hover:-translate-y-1 hover:scale-105"
+            aria-label="Scroll to top"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
 
-        <div className="fixed bottom-0 left-0 right-0 z-50">
-          <Dock items={items} panelHeight={68} baseItemSize={50} magnification={70} />
+          {/* Tooltip */}
+          <div className="absolute bottom-full mb-2 px-3 py-1 text-sm text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">Back to top</div>
         </div>
+        <Dock items={items} panelHeight={68} baseItemSize={50} magnification={70} />
       </div>
     </div>
   );
